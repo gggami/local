@@ -1,0 +1,21 @@
+alias ls='ls -al'
+
+brew_prefix=`brew --prefix`
+alias base64="$brew_prefix/bin/gbase64"
+alias basename="$brew_prefix/bin/gbasename"
+alias cat="$brew_prefix/bin/gcat"
+alias chcon="$brew_prefix/bin/gchcon"
+alias chgrp="$brew_prefix/bin/gchgrp"
+alias chmod="$brew_prefix/bin/gchmod"
+alias chown="$brew_prefix/bin/gchown"
+alias date="$brew_prefix/bin/gdate"
+#alias zcat="$brew_prefix/bin/gzcat"
+alias zcat="/usr/bin/gzcat"
+
+dec() {
+    echo $1 | perl -MURI::Escape -nlp -e '$_ = uri_unescape($_)'
+}
+enc() {
+    echo $1 | perl -MURI::Escape -nlp -e '$_ = uri_escape($_)'
+}
+
