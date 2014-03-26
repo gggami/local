@@ -21,3 +21,7 @@ enc() {
     echo $1 | perl -MURI::Escape -nlp -e '$_ = uri_escape($_)'
 }
 
+utf2sjis() {
+    cat $1 | perl -pe 's/\n/\r\n/' | iconv -f utf8 -t shift-jis
+}
+
