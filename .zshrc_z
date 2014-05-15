@@ -1,0 +1,35 @@
+. ${HOME}/.zsh/z/z.sh
+
+autoload -Uz is-at-least
+
+# Treat hook functions as array
+typeset -ga chpwd_functions
+typeset -ga precmd_functions
+typeset -ga preexec_functions
+
+# Simulate hook functions for older versions
+if ! is-at-least 4.2.7; then
+  function chpwd() { local f; for f in $chpwd_functions; do $f; done }
+  function precmd() { local f; for f in $precmd_functions; do $f; done }
+  function preexec() { local f; for f in $preexec_functions; do $f; done }
+fi
+
+function load-if-exists() { test -e "$1" && source "$1" }
+
+# z - jump around {{{2
+# https://github.com/rupa/z
+_Z_CMD=j
+_Z_DATA=$ZDOTDIR/.z
+if is-at-least 4.3.9; then
+  load-if-exists $ZDOTDIR/z/z.sh
+else
+  _Z_NO_PROMPT_COMMAND=1
+  load-if-exists $ZDOTDIR/z/z.sh && {
+    function precmd_z() {
+      _z --add "$(pwd -P)"
+    }
+    precmd_functions+=precmd_z
+  }
+fi
+test $? || unset _Z_CMD _Z_DATA _Z_NO_PROMPT_COMMAND
+#}}}
