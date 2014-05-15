@@ -1,3 +1,4 @@
+# copied from http://qiita.com/yoshikaw/items/38d3008ac7d0b19b4805
 . ${HOME}/.zsh/z/z.sh
 
 autoload -Uz is-at-least
