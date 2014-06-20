@@ -1,0 +1,9 @@
+set number
+syntax on
+set noai
+set nosi
+set nocompatible
+
+" vimgrep
+autocmd QuickFixCmdPost *grep* cwindow
+

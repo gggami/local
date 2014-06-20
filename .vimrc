@@ -1,12 +1,4 @@
-set number
-syntax on
-set noai
-set nosi
-set nocompatible
-
-" vimgrep
-autocmd QuickFixCmdPost *grep* cwindow
-
+source ${HOME}/.vimrc_common
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -14,10 +6,16 @@ autocmd QuickFixCmdPost *grep* cwindow
 " mkdir -p ~/.vim/bundle
 " git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 " git clone https://github.com/Shougo/vimproc ~/.vim/bundle/vimproc
+" cd ~/.vim/bundle/vimproc && make
 " 
 " 2. .vimrc
 " 
 " 3. :NeoBundleInstall
+"
+" 4. dictionary
+" mkdir ~/.vim/dict
+" cd ~/.vim/dict
+" wget https://raw.github.com/Cside/dotfiles/master/.vim/dict/perl.dict
 """""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
 
