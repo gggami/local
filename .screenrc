@@ -2,7 +2,7 @@ escape ^Tt
 
 utf8 on
 caption always '%?%F%{= gW}%:%{= Kk}%?%2n%f%07=%t%='
-hardstatus alwayslastline '%m/%d %02c:%s %{= .g}%H%{-} %L=%-w%45L>%{= g.}%n %t%{-}%+w %-17<%=%{= .y}(%l)'
+hardstatus alwayslastline '%m/%d %02c %{= .g}%H%{-} %L=%-w%45L>%{= g.}%n %t%{-}%+w %-17<%=%{= .y}(%l)'
 
 #scrollback 10000
 #mousetrack on
