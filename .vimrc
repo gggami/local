@@ -38,7 +38,7 @@ NeoBundle 'petdance/vim-perl'
 NeoBundle 'hotchpotch/perldoc-vim'
 NeoBundle 'thinca/vim-quickrun'
 
-filetype plugin indent on
-filetype indent on
+filetype plugin on
+"filetype indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
