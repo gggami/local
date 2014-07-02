@@ -1,8 +1,13 @@
 set number
 syntax on
-set noai
-set nosi
 set nocompatible
+
+set noautoindent
+set nosmartindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " vimgrep
 autocmd QuickFixCmdPost *grep* cwindow 30
