@@ -9,6 +9,7 @@
 	sh = show --stat
 	pr = remote prune -n origin
 	prr = remote prune origin
+    deld = ls-files --deleted
 	alias = config --get-regexp ^alias\\.
 [color]
 	ui = auto
