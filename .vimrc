@@ -42,3 +42,8 @@ filetype plugin on
 "filetype indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+"autocmd BufRead,BufNewFile *.mkd  setfiletype markdown
+"#autocmd BufRead,BufNewFile *.md  setfiletype markdown
+" md as markdown, instead of modula2
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+
