@@ -3,13 +3,13 @@ set -e
 
 DB_NAME=$1
 FILENAME=$2
-FBASE=`echo $1 | cut -d\. -f1`
+FBASE=`echo ${FILENAME} | cut -d\. -f1`
 [ -n "$FBASE" ] || exit 1
 
 COLUMNS=`head -1 ${FILENAME}`
 
 echo "drop table ${FBASE}"
-mysql -uroot ${DB_NAME} -e "drop table ${FBASE}"
+mysql -uroot ${DB_NAME} -e "drop table if exists ${FBASE}"
 
 echo "create table ${FBASE}"
 mysql -uroot ${DB_NAME} -e "create table ${FBASE} ( id int unsigned not null auto_increment, primary key(id) );"

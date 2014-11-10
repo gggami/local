@@ -121,7 +121,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 ########################################
 # エイリアス
 
-alias ll='ls -al'
+alias l='ls -al'
 alias ltr='ls -altrh'
 
 # sudo の後のコマンドでエイリアスを有効にする
