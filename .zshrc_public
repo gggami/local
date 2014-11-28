@@ -123,6 +123,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 alias l='ls -al'
 alias ltr='ls -altrh'
+alias hist='history 1'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
