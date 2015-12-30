@@ -121,8 +121,8 @@ bindkey '^R' history-incremental-pattern-search-backward
 ########################################
 # エイリアス
 
-alias l='ls -al'
-alias ltr='ls -altrh'
+alias ll='ls -al'
+#alias ltr='ls -altrh'
 alias hist='history 1'
 
 # sudo の後のコマンドでエイリアスを有効にする
@@ -131,6 +131,9 @@ alias sudo='sudo '
 # グローバルエイリアス
 alias -g L='| less'
 alias -g G='| grep'
+
+alias scr='screen -R'
+
 
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1

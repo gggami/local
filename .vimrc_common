@@ -13,3 +13,9 @@ set softtabstop=4
 autocmd QuickFixCmdPost *grep* cwindow 30
 set modifiable
 
+set fileencodings=utf-8,cp932,euc-jp
+
+set laststatus=2
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
+set visualbell t_vb=
