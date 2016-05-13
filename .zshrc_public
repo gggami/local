@@ -63,7 +63,7 @@ precmd () {
 # prompt
 PROMPT="%{${fg[white]}%}[%~] %1(v|%F{green}%1v%f|)
 %{${fg[white]}%}$ "
-RPROMPT="%{${fg[white]}%}[%n@%m]%{${reset_color}%}"
+RPROMPT="%{${fg[white]}%}[%n]%{${reset_color}%}"
 
 
 ########################################
@@ -180,3 +180,11 @@ enc() {
 utf2sjis() {
     cat $1 | perl -pe 's/\n/\r\n/' | iconv -f utf8 -t shift-jis
 }
+
+
+
+########################################
+# rbenv
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
