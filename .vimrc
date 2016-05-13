@@ -15,16 +15,17 @@ source ${HOME}/.vimrc_common
 " 4. dictionary
 " mkdir ~/.vim/dict
 " cd ~/.vim/dict
-" wget https://raw.github.com/Cside/dotfiles/master/.vim/dict/perl.dict
+" curl -L -O https://raw.githubusercontent.com/Cside/dotfiles/master/.vim/dict/perl.dict
 """""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath+=~/.vim/bundle/neobundle.vim
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+"if has('vim_starting')
+"  set runtimepath+=~/.vim/bundle/neobundle.vim
   NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
-endif
+"endif
 
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
@@ -39,6 +40,8 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'petdance/vim-perl'
 NeoBundle 'hotchpotch/perldoc-vim'
 NeoBundle 'thinca/vim-quickrun'
+
+call neobundle#end()
 
 filetype plugin on
 "filetype indent on
