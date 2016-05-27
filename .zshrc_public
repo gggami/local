@@ -188,3 +188,17 @@ utf2sjis() {
 [[ -d ~/.rbenv  ]] && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
+
+
+
+########################################
+# coreutils
+brew_prefix=`brew --prefix`
+alias date="$brew_prefix/bin/gdate"
+#alias base64="$brew_prefix/bin/gbase64"
+#alias basename="$brew_prefix/bin/gbasename"
+#alias cat="$brew_prefix/bin/gcat"
+#alias chcon="$brew_prefix/bin/gchcon"
+#alias chgrp="$brew_prefix/bin/gchgrp"
+#alias chmod="$brew_prefix/bin/gchmod"
+#alias chown="$brew_prefix/bin/gchown"
